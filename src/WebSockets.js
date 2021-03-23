@@ -100,7 +100,7 @@ export default class Websockets extends React.Component {
   }
 
   render() {
-    const { store, models, inventory } = this.state;
+    const { models } = this.state;
     return (
       <>
         <Stats models={models} />

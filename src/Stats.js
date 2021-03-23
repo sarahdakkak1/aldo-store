@@ -47,8 +47,8 @@ class Stats extends React.Component {
           {models.map((model, index) => {
               return (
                 <div key={index} className="model">
-                  <h1>{model.store}</h1>
-                  <h2>{model.model}</h2>
+                  <h3>{model.store}</h3>
+                  <p>{model.model}</p>
                  <h3>{model.inventory}</h3> 
                 </div>
               );
