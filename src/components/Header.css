@@ -1,8 +1,14 @@
-div  {
+.header  {
     padding: 10px;
     text-align: center;
-    background: #1abc9c;
+    background:rgb(239, 236, 240);
     color: white;
     font-size: 30px;
-    height: 10px;
-  }
+    height: 200px;
+ }
+
+ h1, p {
+   color: rgb(51, 42, 42);
+   font-family: sans-serif;
+   line-height: 26px;
+ }

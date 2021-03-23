@@ -1,0 +1,23 @@
+.model {
+    color: rgb(114, 108, 124);
+}
+
+th {
+    padding: 10px; 
+    align-items: center;
+    font-size: 24px;
+    color: rgb(51, 42, 42);
+    width: 300px;
+    position: relative;
+    top:50px;
+    left:150px;
+} 
+td {
+    font-size: 24px; 
+    padding: 10px;
+    color: rgb(136, 127, 151);
+    width: 300px;
+    position: relative;
+    left:250px;
+    top:20px;
+}

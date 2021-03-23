@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "antd";
+import './Stats.css';
 
 class Stats extends React.Component {
   constructor(props) {
@@ -12,8 +13,6 @@ class Stats extends React.Component {
     this.modelRef = React.createRef();
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleEnter = this.handleEnter.bind(this);
   }
 
   componentDidUpdate() {
@@ -25,14 +24,6 @@ class Stats extends React.Component {
       });
   }
 
-  handleClick() {
-    this.props.handleClick(this.state.text);
-    this.setState({ text: "" });
-  }
-
-  handleEnter() {
-    this.handleClick();
-  }
 
   handleChange(e) {
     this.setState({ text: e.target.value });
@@ -41,20 +32,28 @@ class Stats extends React.Component {
   render() {
     const { store, models, inventory } = this.props;
     return (
-      <div id="model-window">
+      <div className="row">
+                <tr>
+                    <th scope="col">Store </th> 
+                    <th scope="col">Model </th>
+                    <th scope="col">Inventory  </th>
+                </tr>
         <h1 id="store-name">{store}</h1>
         <Card id="model-box">
           {models.map((model, index) => {
               return (
-                <div key={index} className="model">
-                  <h3>{model.store}</h3>
-                  <p>{model.model}</p>
-                 <h3>{model.inventory}</h3> 
-                </div>
+                <table class = 'table table-striped'>
+                  <tr>
+                      <td>{model.store}</td>
+                      <td>{model.model}</td>
+                      <td>{model.inventory}</td> 
+                  </tr>
+                </table>
               );
           })}
         </Card>
       </div>
+      
     );
   }
 }
